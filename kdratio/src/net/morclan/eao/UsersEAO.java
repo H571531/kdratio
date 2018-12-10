@@ -23,6 +23,7 @@ public class UsersEAO {
 	}
 
 	public void addUser(User user) {
+		System.out.println("User stuff"+user.getHashetPassord()); 
 		em.persist(user);
 		
 	}
