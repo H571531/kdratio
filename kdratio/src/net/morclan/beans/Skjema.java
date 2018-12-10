@@ -28,13 +28,12 @@ public class Skjema {
 	public Skjema(HttpServletRequest request, UsersEAO userEAO) {
 		this.username=request.getParameter("Username");
 		this.password = request.getParameter("password");
-		this.passwordRepetert = request.getParameter("passordRepetert");
+		this.passwordRepetert = request.getParameter("passwordRepetert");
 		this.userEAO = userEAO;
 		
 	}
 	
-	public boolean isAltGyldig(UsersEAO eao) {
-		
+	public boolean isAltGyldig() {
 		
 		return isFornavnGyldig() && isIkkeTidligereRegistrert() && isPassordGyldig() && isPassordLike();
 	}

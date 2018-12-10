@@ -47,14 +47,11 @@ public class RegisterSerlvet extends HttpServlet {
 		
 		
 		
-		if(skjema.isAltGyldig(userEAO)) {
+		if(skjema.isAltGyldig()) {
 			request.getSession().removeAttribute("skjema");
 			
 			User user = skjema.createUser();
-			
-			
 			userEAO.addUser(user);
-			
 			LoginUtils.sessionStart(request, user, timeout);
 			request.setAttribute("bekreftet", user);
 			
@@ -62,7 +59,7 @@ public class RegisterSerlvet extends HttpServlet {
 		} else {
 			skjema.setupFeilMeldinger();
 			request.getSession().setAttribute("skjema", skjema);
-			response.sendRedirect("MainServlet");
+			response.sendRedirect("RegisterSerlvet");
 		}	
 		
 	}

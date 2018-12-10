@@ -17,34 +17,38 @@
 	<h1>Register</h1>
 	<form id="skjema" name="skjema" method="post" action="RegisterSerlvet" class="pure-form pure-form-aligned">
 		<fieldset>
+		
 			<div class="pure-control-group">
 				<label for="Username">Username:</label> <input id="Username" type="text"
 					name="Username" value="${skjema.username}" /> 
 					<p id="usernameFeilmelding" class="feil">${skjema.usernameFeilmelding}</p>
 					
 					<p id="fornavnFeil" class="gjemt feil">Ugyldig fornavn!</p>
-					
 			</div>
+			
 			<div class="pure-control-group">
-				<label for="passord">Passord:</label> <input id="passord" type="password"
-					name="passord" value="" /> 
+				<label for="password">Password:</label> <input id="password" type="password"
+					name="password" value="" /> 
 					<p id="passordServerFeil" class="feil">${skjema.passwordFeilmelding}</p>
 					<p id="passordFeil" class="gjemt feil">Ugyldig passord!</p>
 					<p class="feil" id="passordTilbakemelding"></p>
 			</div>
+			
 			<div class="pure-control-group">
-				<label for="passordRepetert">Passord repetert:</label> <input id="passwordRepetert"
-					type="password" name="passordRepetert"
+				<label for="passwordRepetert">Password:</label> <input id="passwordRepetert"
+					type="password" name="passwordRepetert"
 					value="" /> 
 					<p id="passordRepetertServerFeil" class="feil">${skjema.passwordRepetertFeilmelding}</p>
 					<p id="passordRepetertFeil" class="gjemt feil">Passord må være like!</p>
 			</div>
+			
 			<div class="pure-controls">
 				<button id="knapp" type="submit" class="pure-button pure-button-primary">Submit</button>
+			
 			</div>
 		</fieldset>
 	</form>
-	<p><a href="LoginServlet">Jeg har allerede meldt meg på, jeg vil heller logge inn!</a></p>
+	<p><a href="LoginServlet">Login!</a></p>
 	
 	<script src="scripts/InputValidering.js"></script>
 </body>
