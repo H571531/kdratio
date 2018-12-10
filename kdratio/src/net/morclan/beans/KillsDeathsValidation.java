@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import net.morclan.eao.DeathsEAO;
 import net.morclan.eao.KillsEAO;
 import net.morclan.eao.UsersEAO;
+import net.morclan.enteties.Kill;
 import net.morclan.utils.TownNames;
 
 public class KillsDeathsValidation {
@@ -54,6 +55,13 @@ public boolean isAltGyldig() {
 		return Distances.stream().anyMatch(g->g.equals(this.distance));
 	}
 	
+public Kill createKill() {
+	Kill ny= new Kill(town,gearLevel,distance);
+	return ny;
+}
+
+public void createDeath() {
 	
+}
   	
 }

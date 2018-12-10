@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.morclan.beans.KillsDeathsValidation;
 import net.morclan.eao.KillsEAO;
 import net.morclan.enteties.Kill;
 import net.morclan.utils.LoginUtils;
@@ -46,7 +47,12 @@ public class KillServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		KillsDeathsValidation skjema=new KillsDeathsValidation(request, kEAO);
+		if(skjema.isAltGyldig()) {
+			Kill add=skjema.createKill();
+			kEAO.add(add);
+		}
+		response.sendRedirect("KillServlet");
 	}
 
 }
