@@ -17,6 +17,12 @@ public class Kill {
   	private String gearLevel;
   	private String distance; 
   	
+  	public Kill() {
+  		this.town="";
+  		this.gearLevel="";
+  		this.distance="";
+  	}
+  	
   	public Kill(String town,String gearLevel, String distance) {
   		this.town=town;
   		this.gearLevel=gearLevel;

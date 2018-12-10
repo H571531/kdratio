@@ -18,6 +18,12 @@ public class Death {
 	  	private String gearLevel;
 	  	private String distance; 
 	  	
+	  	public Death() {
+	  		this.town="";
+	  		this.gearLevel="";
+	  		this.distance="";
+	  	}
+	  	
 	  	public Death(String town,String gearLevel, String distance) {
 	  		this.town=town;
 	  		this.gearLevel=gearLevel;

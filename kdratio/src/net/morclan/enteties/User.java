@@ -17,7 +17,13 @@ public class User {
 		this.username=username;
 		this.hashetPassord=hashetPassord;
 	}
-
+	
+	public User() {
+		this.username="";
+		this.hashetPassord="";
+	}
+	
+	
 	public String getUsername() {
 		return username;
 	}
