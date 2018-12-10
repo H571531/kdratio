@@ -26,7 +26,7 @@
 		</c:forEach>
 		</table>
 		
-		<form id="addKill" name="addKill" method="post" action="RegisterSerlvet" class="pure-form pure-form-aligned">
+		<form id="addKill" name="addKill" method="post" action="KillServlet" class="pure-form pure-form-aligned">
 		<fieldset>
 		
 			<div class="Area">
