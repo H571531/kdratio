@@ -25,7 +25,7 @@ public class KillServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	@EJB
-	KillsEAO kEAO;
+	private KillsEAO kEAO;
 	private List<Kill> list;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
