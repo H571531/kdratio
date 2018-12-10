@@ -12,7 +12,7 @@ import net.morclan.utils.LoginUtils;
 /**
  * Servlet implementation class mainServlet
  */
-@WebServlet("/mainServlet")
+@WebServlet("/MainServlet")
 public class MainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
