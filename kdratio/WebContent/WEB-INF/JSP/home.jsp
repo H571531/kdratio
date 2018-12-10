@@ -9,6 +9,6 @@
 </head>
 <body>
 <h1>Home</h1>
-<h2>Logged in as ${Username.username}</h2>
+<h2>Logged in as </h2>
 </body>
 </html>

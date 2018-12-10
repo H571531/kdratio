@@ -27,6 +27,7 @@ public class MainServlet extends HttpServlet {
 		if(!LoginUtils.brukerErInnlogget(request)) {
 			response.sendRedirect("LoginServlet?trengerLogin");
 		} else {
+			
 			request.getRequestDispatcher("WEB-INF/JSP/home.jsp").forward(request, response);
 		}	
 		
