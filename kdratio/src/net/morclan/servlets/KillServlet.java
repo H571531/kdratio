@@ -26,13 +26,15 @@ public class KillServlet extends HttpServlet {
        
 	@EJB
 	private KillsEAO kEAO;
-	private List<Kill> list;
+	Kill[] kill1= {new Kill("Staroye","low","100-300")};
+	private List<Kill> list=Arrays.asList(kill1);
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if(!LoginUtils.brukerErInnlogget(request)) {
 			response.sendRedirect("LoginServlet?trengerLogin");
 		} else {
-		list=kEAO.getAll();
+		//list=kEAO.getAll();
+			//list.add(new Kill("Staroye","low","100-300"));
 		List<String> locations=Arrays.asList(TownNames.getTownNames());
 		request.setAttribute("Locations", locations);
 		request.setAttribute("Kills", list);
