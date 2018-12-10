@@ -14,7 +14,7 @@ public class KillsEAO {
 		em.persist(kill);
 	}
 	public List<Kill> getAll() {
-		return (List<Kill>) em.createQuery("SELECT d FROM kills d",Kill.class).getResultList();
+		return em.createQuery("SELECT d FROM kills d",Kill.class).getResultList();
 	}
 	
 }
