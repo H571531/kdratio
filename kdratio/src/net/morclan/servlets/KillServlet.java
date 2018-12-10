@@ -33,7 +33,6 @@ public class KillServlet extends HttpServlet {
 			response.sendRedirect("LoginServlet?trengerLogin");
 		} else {
 		list=kEAO.getAll();
-		list.add(new Kill("Altar","low","0-50"));
 		List<String> locations=Arrays.asList(TownNames.getTownNames());
 		request.setAttribute("Locations", locations);
 		request.setAttribute("Kills", list);
