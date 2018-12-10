@@ -18,9 +18,9 @@
 	<form id="skjema" name="skjema" method="post" action="RegisterServlet" class="pure-form pure-form-aligned">
 		<fieldset>
 			<div class="pure-control-group">
-				<label for="fornavn">Fornavn:</label> <input id="fornavn" type="text"
-					name="fornavn" value="${skjema.fornavn}" /> 
-					<p id="fornavnServerFeil" class="feil">${skjema.fornavnFeilmelding}</p>
+				<label for="fornavn">Username:</label> <input id="Username" type="text"
+					name="Username" value="${skjema.username}" /> 
+					<p id="usernameFeilmelding" class="feil">${skjema.usernameFeilmelding}</p>
 					
 					<p id="fornavnFeil" class="gjemt feil">Ugyldig fornavn!</p>
 					
@@ -28,15 +28,15 @@
 			<div class="pure-control-group">
 				<label for="passord">Passord:</label> <input id="passord" type="password"
 					name="passord" value="" /> 
-					<p id="passordServerFeil" class="feil">${skjema.passordFeilmelding}</p>
+					<p id="passordServerFeil" class="feil">${skjema.passwordFeilmelding}</p>
 					<p id="passordFeil" class="gjemt feil">Ugyldig passord!</p>
 					<p class="feil" id="passordTilbakemelding"></p>
 			</div>
 			<div class="pure-control-group">
-				<label for="passordRepetert">Passord repetert:</label> <input id="passordRepetert"
+				<label for="passordRepetert">Passord repetert:</label> <input id="passwordRepetert"
 					type="password" name="passordRepetert"
 					value="" /> 
-					<p id="passordRepetertServerFeil" class="feil">${skjema.passordRepetertFeilmelding}</p>
+					<p id="passordRepetertServerFeil" class="feil">${skjema.passwordRepetertFeilmelding}</p>
 					<p id="passordRepetertFeil" class="gjemt feil">Passord må være like!</p>
 			</div>
 			<div class="pure-controls">
