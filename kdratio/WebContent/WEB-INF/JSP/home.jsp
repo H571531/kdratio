@@ -8,8 +8,14 @@
 <title>Home</title>
 </head>
 <body>
-logget
 <h1>Home</h1>
-<h2>Logged in as ${Username} </h2>
+<p class="LoggedInAs">Logged in as ${Username} </p>
+
+
+
+<a href="DeathServlet">Deaths</a>
+
+
+<a href="KillServlet">Kills</a>
 </body>
 </html>
