@@ -15,6 +15,7 @@ import net.morclan.eao.KillsEAO;
 import net.morclan.enteties.Kill;
 import net.morclan.utils.LoginUtils;
 import net.morclan.utils.TownNames;
+//
 
 /**
  * Servlet implementation class KillServlet
