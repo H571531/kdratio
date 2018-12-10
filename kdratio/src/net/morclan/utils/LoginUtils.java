@@ -94,7 +94,6 @@ public class LoginUtils {
 			//Forsøk å hente session - hvis den ikke finnes, ikke opprett ny
 			sessionStart(request, user, timeout);
 			
-			//Send videre til DeltakerListeServlet
 			return true;
 		}
 	}

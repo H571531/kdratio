@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.morclan.utils.LoginUtils;
+
 /**
  * Servlet implementation class mainServlet
  */
@@ -17,15 +19,16 @@ public class MainServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MainServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if(!LoginUtils.brukerErInnlogget(request)) {
+			response.sendRedirect("LoginServlet?trengerLogin");
+		} else {
+			request.getRequestDispatcher("WEB-INF/JSP/home.jsp").forward(request, response);
+		}	
 		
 	}
 
