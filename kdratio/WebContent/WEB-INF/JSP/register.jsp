@@ -18,7 +18,7 @@
 	<form id="skjema" name="skjema" method="post" action="RegisterSerlvet" class="pure-form pure-form-aligned">
 		<fieldset>
 			<div class="pure-control-group">
-				<label for="fornavn">Username:</label> <input id="Username" type="text"
+				<label for="Username">Username:</label> <input id="Username" type="text"
 					name="Username" value="${skjema.username}" /> 
 					<p id="usernameFeilmelding" class="feil">${skjema.usernameFeilmelding}</p>
 					

@@ -26,7 +26,7 @@ public class Skjema {
 	
 
 	public Skjema(HttpServletRequest request, UsersEAO userEAO) {
-		this.username=request.getParameter("username");
+		this.username=request.getParameter("Username");
 		this.password = request.getParameter("password");
 		this.passwordRepetert = request.getParameter("passordRepetert");
 		this.userEAO = userEAO;
