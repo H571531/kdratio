@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h1>Register</h1>
-	<form id="skjema" name="skjema" method="post" action="RegisterServlet" class="pure-form pure-form-aligned">
+	<form id="skjema" name="skjema" method="post" action="RegisterSerlvet" class="pure-form pure-form-aligned">
 		<fieldset>
 			<div class="pure-control-group">
 				<label for="fornavn">Username:</label> <input id="Username" type="text"

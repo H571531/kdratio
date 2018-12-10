@@ -26,7 +26,7 @@ public class Skjema {
 	
 
 	public Skjema(HttpServletRequest request, UsersEAO userEAO) {
-		this.username=request.getParameter("password");
+		this.username=request.getParameter("username");
 		this.password = request.getParameter("password");
 		this.passwordRepetert = request.getParameter("passordRepetert");
 		this.userEAO = userEAO;
@@ -40,11 +40,6 @@ public class Skjema {
 	}
 	
 	private boolean isIkkeTidligereRegistrert() {
-//		List<Deltaker> liste = deltakerEAO.finnAlleDeltakere();
-//		return !( liste.stream()
-//				.map(d -> d.getMobil())
-//				.anyMatch(m -> m.equals(mobil)));
-		
 		return !userEAO.userExsists(username);
 	}
 
@@ -75,7 +70,6 @@ public class Skjema {
 		if(!isPassordLike()) {
 			passwordRepetertFeilmelding = "Passwords have to match";
 		}
-		//TODO: kjønn, passord
 	}
 
 

@@ -9,62 +9,47 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.morclan.beans.Skjema;
 import net.morclan.eao.UsersEAO;
-import net.morclan.enteties.User;
 import net.morclan.utils.LoginUtils;
 
 /**
- * Servlet implementation class RegisterSerlvet
+ * Servlet implementation class loginServlet
  */
-@WebServlet("/RegisterSerlvet")
-public class RegisterSerlvet extends HttpServlet {
+@WebServlet("/loginServlet")
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	int timeout;
+	
 	@EJB
 	private UsersEAO userEAO;
 	
-	private int timeout;
-	
 	@Override
 	public void init() throws ServletException {
-		timeout = Integer.parseInt(getServletContext().getInitParameter("timeout"));
-
+		timeout = Integer.parseInt(getServletContext().getInitParameter("timeout"));		
 	}
+	
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("WEB-INF/JSP/register.jsp").forward(request, response);
+		String loginBeskjed = LoginUtils.loginOverskrift(request);
+		request.setAttribute("loginError", loginBeskjed);
+		
+		request.getRequestDispatcher("WEB-INF/JSP/Login.jsp").forward(request, response);
+	
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Skjema skjema = new Skjema(request, userEAO);
-		
-		
-		
-		
-		if(skjema.isAltGyldig(userEAO)) {
-			request.getSession().removeAttribute("skjema");
-			
-			User user = skjema.createUser();
-			
-			
-			userEAO.addUser(user);
-			
-			LoginUtils.sessionStart(request, user, timeout);
-			request.setAttribute("bekreftet", user);
-			
-			request.getRequestDispatcher("WEB-INF/JSP/confirm.jsp").forward(request, response);
-		} else {
-			skjema.setupFeilMeldinger();
-			request.getSession().setAttribute("skjema", skjema);
+		if(LoginUtils.loggInn(request,timeout, userEAO)) {
 			response.sendRedirect("MainServlet");
-		}	
-		
+		}else {
+			response.sendRedirect("LoginServlet?feilPassord");
+		}
 	}
 
 }
