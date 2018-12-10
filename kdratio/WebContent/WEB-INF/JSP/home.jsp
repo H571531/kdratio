@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Home</title>
 </head>
 <body>
+logget
 <h1>Home</h1>
-<h2>Logged in as </h2>
+<h2>Logged in as ${Username} </h2>
 </body>
 </html>
