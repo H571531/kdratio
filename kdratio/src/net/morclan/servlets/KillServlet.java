@@ -27,18 +27,19 @@ public class KillServlet extends HttpServlet {
        
 	@EJB
 	private KillsEAO kEAO;
-	Kill[] kill1= {new Kill("Staroye","low","100-300")};
-	private List<Kill> list=Arrays.asList(kill1);
+	/*Kill[] kill1= {new Kill("Staroye","low","100-300")};
+	 * =Arrays.asList(kill1)
+	*/
+	private List<Kill> list;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if(!LoginUtils.brukerErInnlogget(request)) {
 			response.sendRedirect("LoginServlet?trengerLogin");
 		} else {
-		//list=kEAO.getAll();
-			//list.add(new Kill("Staroye","low","100-300"));
+		list=kEAO.getAll();
 		List<String> locations=Arrays.asList(TownNames.getTownNames());
 		request.setAttribute("Locations", locations);
-		request.setAttribute("Kills", list);
+		request.setAttribute("list", list);
 		request.getRequestDispatcher("WEB-INF/JSP/Kills.jsp").forward(request, response);
 		}
 	}

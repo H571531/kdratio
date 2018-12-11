@@ -7,7 +7,7 @@ version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="usersPU" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>   
 		<jta-data-source>morclanDS</jta-data-source>
-		<class></class>    
+		<class>User</class>    
 		<properties>        
 			<property name="eclipselink.weaving" value="false"/>    
 		</properties>
@@ -16,7 +16,7 @@ version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="killsPU" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>   
 		<jta-data-source>morclanDS</jta-data-source>
-		<class></class>    
+		<class>Kill</class>    
 		<properties>        
 			<property name="eclipselink.weaving" value="false"/>    
 		</properties>
@@ -25,7 +25,7 @@ version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="deathsPU" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>   
 		<jta-data-source>morclanDS</jta-data-source>
-		<class></class>    
+		<class>Death</class>    
 		<properties>        
 			<property name="eclipselink.weaving" value="false"/>    
 		</properties>

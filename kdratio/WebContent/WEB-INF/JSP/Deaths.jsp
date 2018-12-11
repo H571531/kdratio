@@ -10,26 +10,26 @@
 <title>Kills</title>
 </head>
 <body>
-<h1>Clan Kills</h1>
+<h1>Clan Deaths</h1>
 	<table class="pure-table">
 		<tr bgcolor="#cccccc">
 			<th>Area</th>
 			<th>Gear Level</th>
 			<th>Range</th>
 		</tr>
-		<c:forEach var="kill" items="${list}">
+		<c:forEach var="death" items="${dlist}">
 		<tr>
-			<td>${kill.town}</td>
-			<td>${kill.gearLevel}</td>
-			<td>${kill.distance}</td>
+			<td>${death.town}</td>
+			<td>${death.gearLevel}</td>
+			<td>${death.distance}</td>
 		</tr>
 		</c:forEach>
 		</table>
 		<a href="MainServlet">Back to main</a>
 		
 		<div class="Submit">
-		<h2>Register Kill</h2>
-		<form id="addKill" name="addKill" method="post" action="KillServlet" class="pure-form pure-form-aligned">
+		<h2>Register Death</h2>
+		<form id="addDeath" name="addDeath" method="post" action="DeathServlet" class="pure-form pure-form-aligned">
 		<fieldset>
 		
 			<div class="location">

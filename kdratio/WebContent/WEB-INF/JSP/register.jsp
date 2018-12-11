@@ -23,14 +23,12 @@
 					name="Username" value="${skjema.username}" /> 
 					<p id="usernameFeilmelding" class="feil">${skjema.usernameFeilmelding}</p>
 					
-					<p id="fornavnFeil" class="gjemt feil">Ugyldig fornavn!</p>
 			</div>
 			
 			<div class="pure-control-group">
 				<label for="password">Password:</label> <input id="password" type="password"
 					name="password" value="" /> 
 					<p id="passordServerFeil" class="feil">${skjema.passwordFeilmelding}</p>
-					<p id="passordFeil" class="gjemt feil">Ugyldig passord!</p>
 					<p class="feil" id="passordTilbakemelding"></p>
 			</div>
 			
@@ -39,7 +37,6 @@
 					type="password" name="passwordRepetert"
 					value="" /> 
 					<p id="passordRepetertServerFeil" class="feil">${skjema.passwordRepetertFeilmelding}</p>
-					<p id="passordRepetertFeil" class="gjemt feil">Passord må være like!</p>
 			</div>
 			
 			<div class="pure-controls">

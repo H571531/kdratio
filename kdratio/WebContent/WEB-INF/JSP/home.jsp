@@ -10,7 +10,7 @@
 <body>
 <h1>Home</h1>
 <p class="LoggedInAs">Logged in as ${Username} </p>
-
+<p class="kdr">Clan K/D Ratio: ${kdr}</p>
 
 
 <a href="DeathServlet">Deaths</a>
