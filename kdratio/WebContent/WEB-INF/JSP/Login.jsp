@@ -30,7 +30,7 @@
 			</div>
 		</fieldset>
 	</form>
-	<p><a href="RegisterServlet">Register</a></p>
+	<p><a href="RegisterSerlvet">Register</a></p>
 
 </body>
 </html>
