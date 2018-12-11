@@ -17,6 +17,6 @@
 	<p>
 		&nbsp;&nbsp;&nbsp;${bekreftet.username}<br />
 	</p>
-	<a href="MainServlet">Gå til deltagerlisten</a>
+	<a href="MainServlet">Continue to the main page</a>
 </body>
 </html>
